@@ -4,6 +4,17 @@
 
 ### NOTES BY MITCHELL INDICATED BY ###
 
+# THIS SCRIPT IS INTENDED TO BE RUN THROUGH THE WRAPPER SCRIPT submit_heudiconv_array.sh 
+# THE JOB ARRAY WRAPPER SCRIPT TAKES IDENTICAL ARGUMENTS AND CAN ALSO BE USED FOR SINGLE SUBJECT
+
+#inputs:
+# 	 (1+) a list of subject IDs in their original format from dicoms/ directory (e.g. SAXE_EMOfd_20 )
+#         if not provided, will run for ALL subjects in dicoms/
+
+#example usage: ./submit_heudiconv_array.sh SAXE_EMOfd_20 SAXE_EMOfd_32 
+# 	    or...   ./submit_heudiconv_array.sh 
+    ### can run for individual participant or multiple
+
 # note: assumes heuristics file is in this dir within: heuristic_files/heudi.py 
 heudifile=heuristic_files/heudi.py  
     ### heudifile variable as the python script which contains naming templates and file organization (see github link -> saxe_heudi_notes.py)
