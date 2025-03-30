@@ -1,5 +1,6 @@
 import os
 
+### NOTES BY MITCHELL INDICATED BY ### 
 
 def create_key(template, outtype=('nii.gz',), annotation_classes=None): 
         ### will confirm if string fits template (abiding by BID naming convention)
