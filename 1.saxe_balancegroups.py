@@ -37,7 +37,13 @@ subjects = oopsImeanCUSTOMERS(subjects) # glad we caught that!
 FactorB = ["X", "Y"]
 FactorC = ["L", "R"]
 
-task_permut = list(permutations(FactorB + FactorC)) # get all permutations of this set
+task_order = [] 
+
+for i in range(len(FactorB)):
+    for j in range(len(FactorC)):
+        task_order.append(FactorB[i] + FactorC[j]) #list of all possible pairs from FactorB and C
+
+task_permut = list(permutations(task_order)) # get all permutations of this set
 
 A_1 = []    # FactorA grouping
 A_2 = []  
