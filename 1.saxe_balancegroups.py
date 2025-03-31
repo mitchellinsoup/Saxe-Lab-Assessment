@@ -10,11 +10,12 @@ import pandas as pd
 # I mean, we humans, tend to eat your - 
 # I mean, our food!
 # 
-# Here, we propose a simple experiment, take give 4 groups of you 4 different food groups we call FactorA, 
-# and we ask you to eat it in 4 different, very human, methods FactorB and FactorC.
+# Here, we propose a simple experiment, given 4 different KEY food groups we call FactorA, 
+# we ask you to eat it in 4 different, very human, methods: FactorB and FactorC and see who eats it the fastest.
 # Naturally, FactorA includes: [icecream=1, soup=2, pasta=3, salsa=4], FactorB includes: [chopsticks=X, toes=Y] (intuitive?), and 
 # FactorC: [Left hand (L), Right elbow (R)]. Just like at home! Here's your group assigment below and the order in which
 # you must eat your food. Salutations.
+
 # From, 
 # FoodFoodFOOOOD (scary monster sound)
 
