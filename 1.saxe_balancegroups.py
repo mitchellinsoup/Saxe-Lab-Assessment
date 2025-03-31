@@ -26,24 +26,18 @@ def create_subj(n):
 
 subjects = create_subj(100) # example with n = 100
 
-def oopsImeanHUMANS(subjects):  # create sample
-    humans = []
+def oopsImeanCUSTOMERS(subjects):  # create sample
+    customers = []
     for i in range(len(subjects)):
-        humans.append("Human_"+ subjects[i].split("_")[1])
-    return humans    
+        customers.append("Customer_"+ subjects[i].split("_")[1])
+    return customers    
 
-subjects = oopsImeanHUMANS(subjects) # glad we caught that!
+subjects = oopsImeanCUSTOMERS(subjects) # glad we caught that!
 
 FactorB = ["X", "Y"]
 FactorC = ["L", "R"]
 
-task_order = [] 
-
-for i in range(len(FactorB)):
-    for j in range(len(FactorC)):
-        task_order.append(FactorB[i] + FactorC[j]) #list of all possible pairs from FactorB and C
-
-task_permut = list(permutations(task_order)) # get all permutations of this set
+task_permut = list(permutations(FactorB + FactorC)) # get all permutations of this set
 
 A_1 = []    # FactorA grouping
 A_2 = []  
@@ -91,7 +85,6 @@ for i in range(len(sizes)):
 
 subjects = groups[0] + groups[1] + groups[2] + groups[3] #combining all subjects in order based on group
 
-assignments = pd.DataFrame({'Group': group_labels, 'Subject/Human': subjects, 'Task seq':task_assign}) #organize in DF
+assignments = pd.DataFrame({'Group': group_labels, 'Subject/Customer': subjects, 'Task seq':task_assign}) #organize in DF
 
 assignments.to_csv('AssignmentEX.csv', index=False) # output csv
-
